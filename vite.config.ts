@@ -10,10 +10,11 @@ export default defineConfig({
       fileName: 'main'
     },
     rollupOptions: {
-      external: 'react',
+      external: ['react', 'react/jsx-runtime'],
       output: {
         globals: {
-          react: 'React'
+          react: 'React',
+          'react/jsx-runtime': 'JSX'
         }
       }
     }
