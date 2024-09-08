@@ -11,11 +11,11 @@ enum Locale {
 const intl = createIntl({
   [Locale.enUS]: {
     action: 'Select locale',
-    docs: 'Click on the Vite and TypeScript logos to learn more'
+    docs: 'Click on the Vite and {ts} logos to learn more'
   },
   [Locale.viVN]: {
     action: 'Chọn ngôn ngữ',
-    docs: 'Bấm vào logo Vite và TypeScript để tìm hiểu thêm'
+    docs: 'Bấm vào logo Vite và {ts} để tìm hiểu thêm'
   }
 })
 
@@ -44,7 +44,7 @@ export default function App() {
           </button>
         </div>
         <p className="read-the-docs">
-          <intl.T id='docs' />
+          <intl.T id='docs' params={{ ts: 'TypeScript' }} />
         </p>
       </div>
     </LocaleProvider>
